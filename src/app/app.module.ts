@@ -4,11 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
+import { NavigationComponent } from './components/pages/navigation/navigation.component';
+import { MenuComponent } from './components/pages/menu/menu.component';
+import { FeatureComponent } from './components/pages/feature/feature.component';
+import { AboutComponent } from './components/pages/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavigationComponent,
+    MenuComponent,
+    FeatureComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
