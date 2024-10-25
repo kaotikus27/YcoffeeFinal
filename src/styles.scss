@@ -18,3 +18,20 @@ body{
     padding: 0;
     color: $black;
 }
+
+::-webkit-scrollbar{
+    width: 6.5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #ffe6ce;
+    border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb{
+    background: hsl(29 72 60% /1);
+    border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: hsl(29 72 50% /1);
+    border-radius: 100vw;
+}

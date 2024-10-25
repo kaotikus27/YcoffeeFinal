@@ -5,6 +5,9 @@ $black : #3D3232;
 
 .nav--container{
     // border: 1px solid red;
+    position: sticky;
+    top: 0; /* Sticks the navigation to the top of the container */
+    z-index: 1000;
     background-color: #fff;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Adds a shadow */
     transition: box-shadow 0.3s ease;
