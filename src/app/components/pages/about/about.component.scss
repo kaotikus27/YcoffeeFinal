@@ -1,0 +1,98 @@
+$title-font: "Itim", sans-serif, cursive;
+$general-font: "Montserrat", sans-serif;
+$hero-font: "Hubballi", sans-serif;
+$black : #3D3232;
+$coffee : #FF7B00;
+.about--container{
+    // border: 1px solid red;
+    .contents{
+        max-width: 1512px;
+        width: 80%; /* Set a fixed width for the body element */ 
+        margin: 50px auto; 
+        .general{
+            // border: 1px solid green;
+            .title{
+                letter-spacing: 15px;
+            }
+            margin-bottom: 55px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            .hero--image{
+                img{
+                    border-radius: 5px;
+                    width: 100%;
+                    height: fit-content;
+                }
+            }
+            .context{
+                display: flex;
+                flex-direction: column;
+                // border: 1px solid violet;
+               
+                .title{
+                    font-family: $title-font;
+                    color: #f4f4f4;
+                    text-shadow: 
+                    -1px -1px 0px black,
+                    1px -1px 0px black,
+                    -1px 1px 0px black,
+                    1px 1px 0px black; /* Stroke effect */
+                    font-size: 65px;
+                    margin: -55px 0 0 0;
+                }
+            }
+            .count{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+                margin-top: -55px;
+                .count-head{
+                    font-family: $title-font;
+                    color: #f4f4f4;
+                    text-shadow: 
+                    -1px -1px 0px black,
+                    1px -1px 0px black,
+                    -1px 1px 0px black,
+                    1px 1px 0px black; /* Stroke effect */
+                    font-size: 65px; 
+                  
+                }
+             
+            }
+            .details{
+               
+                font-size: 20px;
+                width: 80%;
+            }
+            .button--container{
+                margin: 35px;
+                align-self: center;
+                button{
+                    color: $black;
+                    padding: 15px 65px 15px 65px;
+                    font-size: 12px;
+                    border:1px solid $black;
+                    border-radius: 12px 0px 12px 0px;
+                    transition: background-color 0.3s ease-out, transform 0.3s ease-out, box-shadow 0.3s ease-out;
+                    &:hover{
+                        cursor: pointer;
+                        color: $black;
+                       
+                        transform: translateY(-3px); 
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                    }
+                }
+                
+            }
+        }
+        .top--content{
+           
+        }
+        .bottom--content{
+            
+        }
+    }
+   
+}
