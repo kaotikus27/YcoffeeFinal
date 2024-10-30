@@ -7,11 +7,6 @@ $coffee : #FF7B00;
 
 .dashboard--container{
     //  border: 1px solid green; 
-<<<<<<< HEAD
-    
-=======
-   
->>>>>>> 32304281ea26389ecf49310efc3a8314b34d4f6e
      .content{
         // border: 1px solid red;
         max-width: 1512px;
@@ -19,11 +14,7 @@ $coffee : #FF7B00;
         margin: 50px auto; 
         display: grid;
         grid-template-columns: 1.3fr 1.5fr;
-<<<<<<< HEAD
-        
-=======
-      
->>>>>>> 32304281ea26389ecf49310efc3a8314b34d4f6e
+
         .left{
             font-family: $hero-font;
             font-weight: 400;
@@ -83,10 +74,6 @@ $coffee : #FF7B00;
      .service--container{
         font-family: $title-font;
         // border: 1px solid red;
-<<<<<<< HEAD
-        
-=======
->>>>>>> 32304281ea26389ecf49310efc3a8314b34d4f6e
         max-width: 1512px;
         width: 80%; /* Set a fixed width for the body element */ 
         margin: 50px auto; 
