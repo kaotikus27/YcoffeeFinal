@@ -8,8 +8,11 @@ import { NavigationComponent } from './components/pages/navigation/navigation.co
 import { MenuComponent } from './components/pages/menu/menu.component';
 import { FeatureComponent } from './components/pages/feature/feature.component';
 import { AboutComponent } from './components/pages/about/about.component';
+<<<<<<< HEAD
 import { TestimonialsComponent } from './components/pages/testimonials/testimonials.component';
 import { FooterComponent } from './components/pages/footer/footer.component';
+=======
+>>>>>>> 32304281ea26389ecf49310efc3a8314b34d4f6e
 
 @NgModule({
   declarations: [
@@ -18,9 +21,13 @@ import { FooterComponent } from './components/pages/footer/footer.component';
     NavigationComponent,
     MenuComponent,
     FeatureComponent,
+<<<<<<< HEAD
     AboutComponent,
     TestimonialsComponent,
     FooterComponent
+=======
+    AboutComponent
+>>>>>>> 32304281ea26389ecf49310efc3a8314b34d4f6e
   ],
   imports: [
     BrowserModule,
