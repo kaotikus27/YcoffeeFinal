@@ -8,6 +8,8 @@ import { NavigationComponent } from './components/pages/navigation/navigation.co
 import { MenuComponent } from './components/pages/menu/menu.component';
 import { FeatureComponent } from './components/pages/feature/feature.component';
 import { AboutComponent } from './components/pages/about/about.component';
+import { TestimonialsComponent } from './components/pages/testimonials/testimonials.component';
+import { FooterComponent } from './components/pages/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AboutComponent } from './components/pages/about/about.component';
     NavigationComponent,
     MenuComponent,
     FeatureComponent,
-    AboutComponent
+    AboutComponent,
+    TestimonialsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
