@@ -5,6 +5,7 @@
 
 $general-font: "Montserrat", sans-serif;
 $black : #3D3232;
+
 body{
     background-image: url('../src/assets/images/bg-hero-top.png'); /* Specify the image path */
     background-size: cover; /* Adjusts the image to cover the entire element */
@@ -28,7 +29,7 @@ body{
     border-radius: 100vw;
 }
 ::-webkit-scrollbar-thumb{
-    background: hsl(29 72 60% /1);
+    background: hsl(29, 71%, 60%);
     border-radius: 100vw;
 }
 ::-webkit-scrollbar-thumb:hover{

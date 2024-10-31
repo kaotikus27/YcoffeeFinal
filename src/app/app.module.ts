@@ -22,7 +22,6 @@ import { FooterComponent } from './components/pages/footer/footer.component';
     AboutComponent,
     TestimonialsComponent,
     FooterComponent
-
   ],
   imports: [
     BrowserModule,
