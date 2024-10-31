@@ -1,0 +1,55 @@
+{
+    "featureProducts": [
+      {
+        "category": "Espresso",
+        "productId": 1,
+        "productSrc": "../../../../assets/images/macchiato.jpg",
+        "productDescription": "nature1",
+        "productName": "nature1",
+        "productPrice": 123,
+        "productQnty": 1,
+        "productSize": "small"
+      },
+      {
+        "category": "Non Coffee",
+        "productId": 1,
+        "productSrc": "../../../../assets/images/macchiato.jpg",
+        "productDescription": "nature1",
+        "productName": "nature1",
+        "productPrice": 123,
+        "productQnty": 1,
+        "productSize": "small"
+      },
+      {
+        "category": "Pasta",
+        "productId": 1,
+        "productSrc": "../../../../assets/images/macchiato.jpg",
+        "productDescription": "nature1",
+        "productName": "nature1",
+        "productPrice": 123,
+        "productQnty": 1,
+        "productSize": "small"
+      },
+      {
+        "category": "Pastries",
+        "productId": 1,
+        "productSrc": "../../../../assets/images/macchiato.jpg",
+        "productDescription": "nature1",
+        "productName": "nature1",
+        "productPrice": 123,
+        "productQnty": 1,
+        "productSize": "small"
+      },
+      {
+        "category": "Frappes",
+        "productId": 1,
+        "productSrc": "../../../../assets/images/macchiato.jpg",
+        "productDescription": "nature1",
+        "productName": "nature1",
+        "productPrice": 123,
+        "productQnty": 1,
+        "productSize": "small"
+      }
+    ]
+  }
+  
