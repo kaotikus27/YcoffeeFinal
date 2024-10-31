@@ -21,7 +21,26 @@ $coffee : #FF7B00;
         max-width: 1512px;
         width: 80%; /* Set a fixed width for the body element */ 
         margin: 50px auto; 
-        justify-items: center;
+        .carousel{
+        display: flex;
+        gap: 20px;
+        }
+        .testimonial{
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 15px 25px 15px 25px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           h2{
+            font-size:16px;
+           }
+           
+            p{
+                text-align: justify;
+            }
+        }
        
     }
 }
