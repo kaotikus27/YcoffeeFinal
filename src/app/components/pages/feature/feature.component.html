@@ -5,13 +5,15 @@
             <p>OUR PRODUCT</p>
         </div>
         <div class="context">
-            <div class="left--item">
-                <ul>
-                    <li class="active">Espresso</li>
-                    <li>Non Coffee</li>
+            <div  (change)="ChangeCategory($event)" class="left--item">
+
+                <ul *ngFor="let category of featureProduct; let i = index  ">
+                    <li [value]="category.category"  >{{category.category}}</li>
+                    <!-- <li class="active">{{category.category}}</li>
+                    <li >Non Coffee</li>
                     <li>Pasta</li>
                     <li>Pastries</li>
-                    <li>Frappes</li>
+                    <li>Frappes</li> -->
                 </ul>
             </div>
             <div class="right--item">
@@ -54,6 +56,10 @@
         <div class="menu--link">
             <button  class="btn-general-design modify">SEE MENU</button>
         </div>
+
     </div>
 </div>
+
+
+   
 

@@ -10,7 +10,7 @@ import { FeatureComponent } from './components/pages/feature/feature.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { TestimonialsComponent } from './components/pages/testimonials/testimonials.component';
 import { FooterComponent } from './components/pages/footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,14 +19,15 @@ import { FooterComponent } from './components/pages/footer/footer.component';
     NavigationComponent,
     MenuComponent,
     FeatureComponent,
-
     AboutComponent,
     TestimonialsComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

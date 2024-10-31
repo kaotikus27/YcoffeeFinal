@@ -21,4 +21,5 @@ export class DashboardComponent {
         imageAlt:'nature3',
       }
     ]
+
 }
