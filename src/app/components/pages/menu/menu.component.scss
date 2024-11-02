@@ -1,115 +1,188 @@
+// $title-font: "Itim", sans-serif, cursive;
+// $general-font: "Montserrat", sans-serif;
+// $hero-font: "Hubballi", sans-serif;
+// $black : #3D3232;
+// $coffee : #FF7B00;
+// .carousel--container{
+//     position: relative;
+//     margin: auto;
+//     text-align: center;
+//     width: 350px;
+//     text-align: center;
+//     border-radius: 15px;
+//     box-shadow: 0 8px 16px #dce1e1;
+//     img{
+//         display: none;
+//         border-radius: 15px;
+//     }
+//     img.image-active{
+//         display: block;
+//         width: 100%;
+//         height: 400px;
+//     }
+//     /* dot indicators */
+//     .carousel-dot-container{
+//         position: absolute;
+//         right: 0;
+//         left: 0;
+//         bottom: 0;
+//         display: flex;
+//         justify-content: center;
+//         padding: 0;
+//         margin-bottom: 1rem;
+//         .dot{
+//             cursor: pointer;
+//             height: 13px;
+//             width: 13px;
+//             background-color: #fff;
+//             border-radius: 50%;
+//             display: inline-block;
+//             transition: opacity 0.6s ease;
+//             opacity: 0.5;
+//         }
+//         .active,
+//         .dot:hover{
+//             opacity: 1;
+//         }
+//     }
+//     /* image transition */
+//     .fade{
+//         animation-name: fade;
+//         animation-duration: 1.5s;
+//     }
+//     .btn-carousel{
+//         position: absolute;
+//         top: 0;
+//         bottom: 0;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         width: 15%;
+//         padding: 0;
+//         color: #fff;
+//         text-align: center;
+//         background-color: 0 0 ;
+//         border: 0;
+//         cursor: pointer;
+//         .btn-prev{
+//             left: 0;
+//         }
+//         .btn-next{
+//             right: 0;
+//         }
+//         .icon-carousel{
+//             color: #fff;
+//             opacity: 0.5;
+//             transform: all 0.15s ease;
+//             &:hover{
+//                 opacity: .9;
+//             }
+//             :active{
+//                 opacity: 0.5;
+//             }
+//         }
+//         .icon-prev{
+//             font-size: 35px;
+//         }
+//         .icon-next{
+//             font-size: 35px;
+//         }
+//     }
+// }
+// @keyframes fade{
+//     from{
+//         opacity: 0.4;
+//     }
+//     to{
+//         opacity: 1;
+//     }
+// }
+
+/* THIS IS TEST STYLE FOR PROTOTYPE : STATIC */
 $title-font: "Itim", sans-serif, cursive;
 $general-font: "Montserrat", sans-serif;
 $hero-font: "Hubballi", sans-serif;
 $black : #3D3232;
 $coffee : #FF7B00;
- 
-
-.carousel--container{
-    position: relative;
-    margin: auto;
-    text-align: center;
-    width: 350px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px #dce1e1;
-    img{
-        display: none;
-        border-radius: 15px;
-
-    }
-
-    img.image-active{
-        display: block;
-        width: 100%;
-        height: 400px;
-    }
-
-    /* dot indicators */
-    .carousel-dot-container{
-        position: absolute;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin-bottom: 1rem;
-
-        .dot{
-            cursor: pointer;
-            height: 13px;
-            width: 13px;
-            background-color: #fff;
-            border-radius: 50%;
-            display: inline-block;
-            transition: opacity 0.6s ease;
-            opacity: 0.5;
-        }
-
-        .active,
-        .dot:hover{
-            opacity: 1;
-        }
-
-    }
-
-    /* image transition */
-    .fade{
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-
-    .btn-carousel{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 15%;
-        padding: 0;
-        color: #fff;
-        text-align: center;
-        background-color: 0 0 ;
-        border: 0;
-        cursor: pointer;
-
-        .btn-prev{
-            left: 0;
-        }
-
-        .btn-next{
-            right: 0;
-        }
-
-        .icon-carousel{
-            color: #fff;
-            opacity: 0.5;
-            transform: all 0.15s ease;
-            &:hover{
-               
-                opacity: .9;
-            }
-            :active{
-                opacity: 0.5;
-            }
-        }
-        .icon-prev{
-            font-size: 35px;
-        }
-        .icon-next{
-            font-size: 35px;
-        }
-    }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+.menu--container {
+  border: 1px solid red;
+  max-width: 1512px;
+  width: 80%; /* Set a fixed width for the body element */
+  margin: 50px auto;
+  justify-items: center;
 
-@keyframes fade{
-    from{
-        opacity: 0.4;
+  .active{
+    color: $coffee;
+    font-weight: bold;
+  }
+  .context {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+    .left--container {
+      border: 1px solid pink;
+
+      .general {
+        display: flex;
+        flex-direction: column;
+        .ulli--context{
+            ul{
+                
+                li{
+                    list-style: none;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .general--item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 45px;
+        }
+      }
     }
-    to{
-        opacity: 1;
+    .right--container {
+      border: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      .context--container{
+        display: flex;
+        flex-direction: column;
+        .head{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .body{
+            width: 50%;
+            text-align: justify;
+            
+        }
+      }
+      .image--hero {
+        height: 350px;
+        width: 350px;
+        overflow: hidden;
+        // border: 1px solid red;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
     }
+  }
 }

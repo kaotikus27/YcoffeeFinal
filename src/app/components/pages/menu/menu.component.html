@@ -1,4 +1,4 @@
-
+<!-- 
 <div *ngIf="images && images.length > 0" class="carousel--container">
     <img *ngFor="let image of images; let i = index" 
     [src]="image.imageSrc" [alt]="image.imageAlt"
@@ -16,7 +16,7 @@
         </span>
     </div>
 
-    <!-- <div *ngIf="controls" class="btn-carousel btn-prev">
+    <div *ngIf="controls" class="btn-carousel btn-prev">
         <i class="fas fa-arrow-circle-left icon-carousel icon-prev"
         (click)="onPrevClick()"
         ></i>
@@ -26,6 +26,68 @@
     <i class="fas fa-arrow-circle-right icon-carousel icon-next"
     (click)="onNextClick()"
     ></i>
-    </div>  --> 
+    </div>  
     
 </div> 
+ -->
+
+<div class="menu--container">
+  <div class="context">
+    <div class="left--container">
+      <div class="espresso--list general">
+        <div class="general--item">
+          <p [ngClass]="{'active':selectedList === 1}">ESPRESSO</p>
+          <span *ngIf="!espresso">
+            <img (click)="showEspresso()" src="../../../../assets/images/down--arrow.png" alt=""/>
+         </span>
+         <span *ngIf="espresso">
+            <img  (click)="showEspresso()" src="../../../../assets/images/up--arrow.png" alt=""/>
+         </span>
+        </div>
+        <div *ngIf="espresso" class="ulli--context">
+          <ul>
+            <li>TEST1</li>
+            <li>TEST1</li>
+            <li>TEST1</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nonCoffee--list general">
+        <div class="general--item">
+          <p [ngClass]="{'active':selectedList === 2}">NON ESPRESSO</p>
+          <span *ngIf="!nonCoffee">
+            <img (click)="showNonCoffee()" src="../../../../assets/images/down--arrow.png" alt=""/>
+         </span>
+         <span *ngIf="nonCoffee">
+            <img  (click)="showNonCoffee()" src="../../../../assets/images/up--arrow.png" alt=""/>
+         </span>
+        </div>
+        <div *ngIf="nonCoffee" class="ulli--context">
+          <ul>
+            <li>TEST1</li>
+            <li>TEST1</li>
+            <li>TEST1</li>
+          </ul>
+        </div>
+      </div>
+    
+      
+    </div>
+    <div class="right--container">
+      <div class="image--hero">
+        <img src="../../../../assets/images/vanillafrappe.jpg" alt="" />
+      </div>
+      <div class="context--container">
+        <div class="head"> 
+            <h1>Solo Lasagna</h1>
+            <p>₱80</p>
+        </div>
+        <div class="body">
+            <p>Classic tomato and beef sauce topped with
+                béchamel, served with 1 garlic bread</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
