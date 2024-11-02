@@ -83,11 +83,14 @@ $coffee : #FF7B00;
                     }
                     .image--hero{
                         height: 500px;
+                        width: 350px;
+                        overflow: hidden;
                         // border: 1px solid red;
                     }
                     img{
-                        width: fit-content;
-                        height: 500px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                         border-radius: 5px;
                     }
                 }

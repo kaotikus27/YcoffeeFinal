@@ -5,18 +5,24 @@
             <p>OUR PRODUCT</p>
         </div>
         <div class="context">
-            <div  (change)="ChangeCategory($event)" class="left--item">
-
-                <ul *ngFor="let category of featureProduct; let i = index  ">
+            <div class="left--item">
+               <!--  <ul *ngFor="let category of featureProduct; let i = index  ">
                     <li [value]="category.category"  >{{category.category}}</li>
-                    <!-- <li class="active">{{category.category}}</li>
+                    <li class="active">{{category.category}}</li>
                     <li >Non Coffee</li>
                     <li>Pasta</li>
                     <li>Pastries</li>
-                    <li>Frappes</li> -->
+                    <li>Frappes</li>
+                </ul> -->
+                <ul >
+                    <li [ngClass]="{'active':selectedList === 1}" (click)="showEspresso()">Espresso</li>
+                    <li [ngClass]="{'active':selectedList === 2}" (click)="showNonCoffee()" >Non Coffee</li>
+                    <li [ngClass]="{'active':selectedList === 3}" (click)="showPasta()">Pasta</li>
+                    <li [ngClass]="{'active':selectedList === 4}" (click)="showPastries()">Pastries</li>
+                    <li  [ngClass]="{'active':selectedList === 5}"(click)="showFrappes()">Frappes</li>
                 </ul>
             </div>
-            <div class="right--item">
+            <div class="right--item" *ngIf="espresso">
                 <div class="product">
                     <div class="image--hero">
                         <img src="../../../../assets/images/macchiato.jpg" alt="">
@@ -28,7 +34,7 @@
                         <button  class="btn-general-design">Macchiato</button>
                     </div>
                 </div>
-                <div class="product">
+                <div class="product" >
                     <div class="image--hero">
                         <img src="../../../../assets/images/americano.jpg" alt="">
                     </div>
@@ -51,6 +57,147 @@
                     </div>
                 </div>
             </div>
+            <div class="right--item" *ngIf="nonCoffee">
+                <div class="product">
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/chocolate.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk!</p>
+                    </div>
+                    <div class="button--container">
+                        <button  class="btn-general-design">Macchiato</button>
+                    </div>
+                </div>
+                <div class="product" >
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/matchaNon.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk</p>
+                    </div>
+                    <div class="button--container">
+                        <button class="btn-general-design">Americano</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/thaimilk.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk</p>
+                    </div>
+                    <div class="button--container ">
+                        <button class="btn-general-design">Cafe Mocha</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right--item" *ngIf="pasta">
+                <div class="product">
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/lasagna.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk!</p>
+                    </div>
+                    <div class="button--container">
+                        <button  class="btn-general-design">Macchiato</button>
+                    </div>
+                </div>
+                <div class="product" >
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/pesto.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk</p>
+                    </div>
+                    <div class="button--container">
+                        <button class="btn-general-design">Americano</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/pasta.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk</p>
+                    </div>
+                    <div class="button--container ">
+                        <button class="btn-general-design">Cafe Mocha</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right--item" *ngIf="pastries">
+                <div class="product">
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/croissant.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk!</p>
+                    </div>
+                    <div class="button--container">
+                        <button  class="btn-general-design">Macchiato</button>
+                    </div>
+                </div>
+                <div class="product" >
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/cinnamon.jpeg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk</p>
+                    </div>
+                    <div class="button--container">
+                        <button class="btn-general-design">Americano</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/cookie.jpeg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk</p>
+                    </div>
+                    <div class="button--container ">
+                        <button class="btn-general-design">Cafe Mocha</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right--item" *ngIf="frappes">
+                <div class="product">
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/CaramelFrappe.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk!</p>
+                    </div>
+                    <div class="button--container">
+                        <button  class="btn-general-design">Macchiato</button>
+                    </div>
+                </div>
+                <div class="product" >
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/vanillafrappe.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk</p>
+                    </div>
+                    <div class="button--container">
+                        <button class="btn-general-design">Americano</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image--hero">
+                        <img src="../../../../assets/images/chocofrappe.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Espresso and milk with steamed foam milk</p>
+                    </div>
+                    <div class="button--container ">
+                        <button class="btn-general-design">Cafe Mocha</button>
+                    </div>
+                </div>
+            </div>
+           
            
         </div>
         <div class="menu--link">

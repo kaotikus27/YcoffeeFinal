@@ -29,12 +29,63 @@ export class FeatureComponent implements OnInit  {
     
   }
 
+  espresso:boolean = true
+  nonCoffee:boolean = false
+  pasta:boolean = false
+  pastries:boolean = false
+  frappes:boolean = false
+
+  selectedList = 1;
+
   ChangeCategory(e: any){
     this.selectedValue.category
     console.log("clicekd")
 
   }
 
+  showEspresso(){
+    this.espresso = true;
+    this.nonCoffee = false;
+    this.pasta = false;
+    this.pastries = false;
+    this.frappes = false;
+    this.selectedList = 1;
+  }
+
+  showNonCoffee(){
+    this.espresso = false;
+    this.nonCoffee = true;
+    this.pasta = false;
+    this.pastries = false;
+    this.frappes = false;
+    this.selectedList = 2;
+  }
+
+  showPasta(){
+    this.espresso = false;
+    this.nonCoffee = false;
+    this.pasta = true;
+    this.pastries = false;
+    this.frappes = false;
+    this.selectedList = 3;
+  }
+  showPastries(){
+    this.espresso = false;
+    this.nonCoffee = false;
+    this.pasta = false;
+    this.pastries = true;
+    this.frappes = false;
+    this.selectedList = 4;
+  }
+  showFrappes(){
+    this.espresso = false;
+    this.nonCoffee = false;
+    this.pasta = false;
+    this.pastries = false;
+    this.frappes = true;
+    this.selectedList = 5;
+  }
+ 
   
 
 
