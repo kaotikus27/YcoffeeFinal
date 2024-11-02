@@ -21,7 +21,7 @@ export class FeatureComponent implements OnInit  {
 
 
   ngOnInit(): void {
-    interval(200)
+    interval(1000)
     .pipe(switchMap(()=>  this.productService.getAllFeatureProduct()))
     .subscribe((data)=>{
       this.featureProduct = data;
