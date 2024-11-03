@@ -48,47 +48,47 @@
         <div *ngIf="espresso" class="list--context">
             <div (click)="setCoffeeSelection('americano')"  class="content">
               <p>AMERICANO</p>
-              <span>₱200</span>
+              <span>₱100</span>
             </div>
             <div (click)="setCoffeeSelection('latte')" class="content">
               <p>LATTE</p>
-              <span>₱200</span>
+              <span>₱120</span>
             </div>
-            <div class="content">
+            <div (click)="setCoffeeSelection('vanillaLatte')" class="content">
               <p>VANILLA LATTE</p>
-              <span>₱200</span>
+              <span>₱120</span>
             </div>
-            <div class="content">
+            <div (click)="setCoffeeSelection('caramelLatte')" class="content">
               <p>CARAMEL LATTE</p>
-              <span>₱200</span>
+              <span>₱120</span>
             </div>
-            <div class="content">
+            <div (click)="setCoffeeSelection('hazelnutLatte')" class="content">
               <p>HAZELNUT LATTE</p>
-              <span>₱200</span>
+              <span>₱120</span>
             </div>
-            <div class="content">
+            <div  (click)="setCoffeeSelection('spanishLatte')"  class="content">
               <p>SPANISH LATTE</p>
-              <span>₱200</span>
+              <span>₱120</span>
             </div>
-            <div class="content">
+            <div (click)="setCoffeeSelection('cafeLatte')" class="content">
               <p>CAFE MOCHA</p>
-              <span>₱200</span>
+              <span>₱120</span>
             </div>
-            <div class="content">
+            <div (click)="setCoffeeSelection('caramelMacchiato')" class="content">
               <p>CARAMEL MACCHIATO</p>
-              <span>₱200</span>
+              <span>₱120</span>
             </div>
-            <div class="content">
+            <div (click)="setCoffeeSelection('saltedCaramelLatte')" class="content">
               <p>SALTED CARAMEL NACCHIATO</p>
-              <span>₱200</span>
+              <span>₱120</span>
             </div>
-            <div class="content">
+            <div (click)="setCoffeeSelection('brownSugarLatte')" class="content">
               <p>BROWN SUGAR LATTE</p>
-              <span>₱200</span>
+              <span>₱120</span>
             </div>
-            <div class="content">
+            <div (click)="setCoffeeSelection('white')" class="content">
               <p>WHITE MOCHA</p>
-              <span>₱200</span>
+              <span>₱130</span>
           </div>
         </div>
       </div>
@@ -120,15 +120,17 @@
         </div>
       </div>
     </div>
+    
     <div class="right--container">
       <div *ngIf="selectedCoffee['americano']" class="contained">
         <div class="image--hero">
-          <img src="../../../../assets/images/vanillafrappe.jpg" alt="" />
+          <img src="../../../../assets/images/americano.jpg" alt="" />
         </div>
         <div class="context--container">
           <div class="head"> 
               <h1>Americano</h1>
-              <p>₱80</p>
+              <p>₱100</p>
+              <p style="color: rgb(77, 76, 76);">₱120</p>
           </div>
           <div class="body">
               <p>Classic tomato and beef sauce topped with
@@ -137,15 +139,32 @@
         </div>
       </div>
 
-
       <div *ngIf="selectedCoffee['latte']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/lattedrink.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>Latte</h1>
+              <p>₱120</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="selectedCoffee['vanillaLatte']" class="contained">
         <div class="image--hero">
           <img src="../../../../assets/images/vanillafrappe.jpg" alt="" />
         </div>
         <div class="context--container">
           <div class="head"> 
-              <h1>Latte</h1>
-              <p>₱80</p>
+              <h1>VANILLA LATTE</h1>
+              <p>₱120</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
           </div>
           <div class="body">
               <p>Classic tomato and beef sauce topped with
@@ -153,6 +172,148 @@
           </div>
         </div>
       </div>
+
+      <div *ngIf="selectedCoffee['caramelLatte']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/caramellatte.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>CARAMEL LATTE</h1>
+              <p>₱120</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="selectedCoffee['hazelnutLatte']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/hazelnutlatte.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>HAZELNUT LATTE</h1>
+              <p>₱120</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="selectedCoffee['spanishLatte']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/spanishlatte.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>SPANISH LATTE</h1>
+              <p>₱120</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="selectedCoffee['cafeLatte']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/cafemocha.jpeg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>CAFE MOCHA</h1>
+              <p>₱120</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="selectedCoffee['caramelMacchiato']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/caramelmacchiato.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>CARAMEL MACCHIATO</h1>
+              <p>₱120</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="selectedCoffee['saltedCaramelLatte']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/saltedcaramellatte.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>SALTED CARAMEL NACCHIATO</h1>
+              <p>₱120</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="selectedCoffee['brownSugarLatte']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/brownsugarlatte.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>BROWN SUGAR LATTE</h1>
+              <p>₱120</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="selectedCoffee['white']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/whitemocha.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>WHITE MOCHA</h1>
+              <p>₱130</p>
+              <p style="color: rgb(77, 76, 76);">₱140</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
 
       
       <div *ngIf="selectedCoffee['chocolateLatte']" class="contained">
