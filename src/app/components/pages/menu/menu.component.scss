@@ -101,6 +101,7 @@
 /* THIS IS TEST STYLE FOR PROTOTYPE : STATIC */
 $title-font: "Itim", sans-serif, cursive;
 $general-font: "Montserrat", sans-serif;
+$menu-font : "Mallanna", sans-serif;
 $hero-font: "Hubballi", sans-serif;
 $black : #3D3232;
 $coffee : #FF7B00;
@@ -108,9 +109,10 @@ $coffee : #FF7B00;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $general-font;
 }
 .menu--container {
-  border: 1px solid red;
+  // border: 1px solid red;
   max-width: 1512px;
   width: 80%; /* Set a fixed width for the body element */
   margin: 50px auto;
@@ -119,70 +121,117 @@ $coffee : #FF7B00;
   .active{
     color: $coffee;
     font-weight: bold;
+    text-decoration-line: underline;
+   
   }
   .context {
-    border: 1px solid green;
-    display: flex;
+    // border: 1px solid green;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
     flex-direction: row;
-    gap: 50px;
-    justify-content: space-between;
+    gap: 10px;
     .left--container {
-      border: 1px solid pink;
-
+      font-family: $menu-font;
+      font-weight: 500;
+      // border: 1px solid red;
       .general {
         display: flex;
         flex-direction: column;
-        .ulli--context{
-            ul{
-                
-                li{
-                    list-style: none;
-                    margin-bottom: 15px;
-                }
+        .list--context{
+          
+          .content{
+            cursor: pointer;
+            &:hover{
+              color: #FF7B00;
+
             }
+           p{
+           margin-bottom: 30px;
+           width: 50%;
+           }
+           display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 25px;
+          }
         }
         .general--item {
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          gap: 45px;
+         margin-bottom: 15px;
+         .head{
+          font-size: 22px;
+          &:hover{
+            color: $coffee;
+            cursor: pointer;
+          }
+         }
         }
       }
     }
     .right--container {
-      border: 1px solid gray;
+        // border: 1px solid rgb(0, 255, 30);
+        padding: 5em;
+        font-family: $menu-font;
+        font-weight: 600;
+      .contained{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      .context--container{
-        display: flex;
-        flex-direction: column;
-        .head{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .body{
-            width: 50%;
-            text-align: justify;
-            
-        }
-      }
-      .image--hero {
-        height: 350px;
-        width: 350px;
-        overflow: hidden;
-        // border: 1px solid red;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         border-radius: 5px;
+        padding: 2em;
+        gap: 20px;
+        /* From https://css.glass */
+        background: rgba(139, 139, 139, 0.2);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 0px solid rgba(139, 139, 139, 0.3);
+        .context--container{
+          display: flex;
+          flex-direction: column;
+        
+          .head{
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              color: $coffee;
+              h1{
+                font-size: 25px;
+              }
+              p{
+                font-size: 22px;
+              }
+
+          }
+          .body{
+              width: 80%;
+              text-align: justify;
+              p{
+                margin-top: 20px;
+              }
+          }
+        }
+        .image--hero {
+          height: 350px;
+          width: 450px;
+          overflow: hidden;
+          // border: 1px solid red;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 5px;
+        }
       }
+     
+
     }
   }
 }

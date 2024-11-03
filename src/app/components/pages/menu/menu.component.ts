@@ -30,11 +30,47 @@ export class MenuComponent implements OnInit  {
     frappes:boolean = false
     selectedList = 1;
 
+    // items to loop
+    selectedCoffee: { [key: string]: boolean } = {
+      americano: true,
+      latte: false,
+      vanillaLatte: false,
+      caramelLatte: false,
+      hazelnutLatte: false,
+      spanishLatte: false,
+      cafeLatte: false,
+      caramelMacchiato: false,
+      saltedCaramelLatte: false,
+      brownSugarLatte: false,
+      white: false,
+      chocolateLatte: false,
+      matchaLatte: false,
+      thaiMilkTea: false,
+      caramelFrappe: false,
+      vanillaFrappe: false,
+      hazelnutFrappe: false,
+      mochaFrappe: false,
+      matchaFrappe: false,
+      chocoFrappe: false,
+      classicBeefLasgna: false,
+      tunaPestoPenne: false,
+      cheesyMacaroni: false,   
+      butterCroissant: false,
+      painAuChocolat: false,
+      chunkyCookies: false,
+      cinnamonRoll: false,
+    };
+
+   
+
+
+    
+/* ============================================================= */
+
   //set index of image on dot or indicator
   selectImage(index:number):void{
     this.selectedIndex = index;
   }
-
   onPrevClick(){
     if(this.selectedIndex === 0){
       this.selectedIndex = this.images.length -1;
@@ -54,53 +90,21 @@ export class MenuComponent implements OnInit  {
       console.log("s?")
     }
   }
-
-
-
-
   /* test test prototype */
-
-  showEspresso(){
-    this.espresso = true;
-    this.nonCoffee = false;
-    this.pasta = false;
-    this.pastries = false;
-    this.frappes = false;
-    this.selectedList = 1;
+  setMenu(selected: number) {
+    this.espresso = selected === 1;
+    this.nonCoffee = selected === 2;
+    this.pasta = selected === 3;
+    this.pastries = selected === 4;
+    this.frappes = selected === 5;
+    this.selectedList = selected;
   }
 
-  showNonCoffee(){
-    this.espresso = false;
-    this.nonCoffee = true;
-    this.pasta = false;
-    this.pastries = false;
-    this.frappes = false;
-    this.selectedList = 2;
-  }
-
-  showPasta(){
-    this.espresso = false;
-    this.nonCoffee = false;
-    this.pasta = true;
-    this.pastries = false;
-    this.frappes = false;
-    this.selectedList = 3;
-  }
-  showPastries(){
-    this.espresso = false;
-    this.nonCoffee = false;
-    this.pasta = false;
-    this.pastries = true;
-    this.frappes = false;
-    this.selectedList = 4;
-  }
-  showFrappes(){
-    this.espresso = false;
-    this.nonCoffee = false;
-    this.pasta = false;
-    this.pastries = false;
-    this.frappes = true;
-    this.selectedList = 5;
+  setCoffeeSelection(coffeeType: string) {
+    Object.keys(this.selectedCoffee).forEach(key => {
+      this.selectedCoffee[key] = key === coffeeType;
+      console.log(this.selectedCoffee)
+    });
   }
 
 }

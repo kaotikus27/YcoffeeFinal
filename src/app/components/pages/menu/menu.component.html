@@ -31,63 +31,149 @@
 </div> 
  -->
 
-<div class="menu--container">
+ <div class="menu--container">
   <div class="context">
     <div class="left--container">
       <div class="espresso--list general">
         <div class="general--item">
-          <p [ngClass]="{'active':selectedList === 1}">ESPRESSO</p>
+          <p  (click)="setMenu(1)" class="head" [ngClass]="{'active':selectedList === 1}">ESPRESSO</p>
           <span *ngIf="!espresso">
-            <img (click)="showEspresso()" src="../../../../assets/images/down--arrow.png" alt=""/>
+            <img (click)="setMenu(1)" src="../../../../assets/images/down--arrow.png" alt=""/>
          </span>
          <span *ngIf="espresso">
-            <img  (click)="showEspresso()" src="../../../../assets/images/up--arrow.png" alt=""/>
+            <img  (click)="setMenu(1)" src="../../../../assets/images/up--arrow.png" alt=""/>
          </span>
         </div>
-        <div *ngIf="espresso" class="ulli--context">
-          <ul>
-            <li>TEST1</li>
-            <li>TEST1</li>
-            <li>TEST1</li>
-          </ul>
+        
+        <div *ngIf="espresso" class="list--context">
+            <div (click)="setCoffeeSelection('americano')"  class="content">
+              <p>AMERICANO</p>
+              <span>₱200</span>
+            </div>
+            <div (click)="setCoffeeSelection('latte')" class="content">
+              <p>LATTE</p>
+              <span>₱200</span>
+            </div>
+            <div class="content">
+              <p>VANILLA LATTE</p>
+              <span>₱200</span>
+            </div>
+            <div class="content">
+              <p>CARAMEL LATTE</p>
+              <span>₱200</span>
+            </div>
+            <div class="content">
+              <p>HAZELNUT LATTE</p>
+              <span>₱200</span>
+            </div>
+            <div class="content">
+              <p>SPANISH LATTE</p>
+              <span>₱200</span>
+            </div>
+            <div class="content">
+              <p>CAFE MOCHA</p>
+              <span>₱200</span>
+            </div>
+            <div class="content">
+              <p>CARAMEL MACCHIATO</p>
+              <span>₱200</span>
+            </div>
+            <div class="content">
+              <p>SALTED CARAMEL NACCHIATO</p>
+              <span>₱200</span>
+            </div>
+            <div class="content">
+              <p>BROWN SUGAR LATTE</p>
+              <span>₱200</span>
+            </div>
+            <div class="content">
+              <p>WHITE MOCHA</p>
+              <span>₱200</span>
+          </div>
         </div>
       </div>
 
+
       <div class="nonCoffee--list general">
         <div class="general--item">
-          <p [ngClass]="{'active':selectedList === 2}">NON ESPRESSO</p>
+          <p  (click)="setMenu(2)" class="head" [ngClass]="{'active':selectedList === 2}">NON ESPRESSO</p>
           <span *ngIf="!nonCoffee">
-            <img (click)="showNonCoffee()" src="../../../../assets/images/down--arrow.png" alt=""/>
+            <img (click)="setMenu(2)" src="../../../../assets/images/down--arrow.png" alt=""/>
          </span>
          <span *ngIf="nonCoffee">
-            <img  (click)="showNonCoffee()" src="../../../../assets/images/up--arrow.png" alt=""/>
+            <img  (click)="setMenu(2)" src="../../../../assets/images/up--arrow.png" alt=""/>
          </span>
         </div>
-        <div *ngIf="nonCoffee" class="ulli--context">
-          <ul>
-            <li>TEST1</li>
-            <li>TEST1</li>
-            <li>TEST1</li>
-          </ul>
+        <div *ngIf="nonCoffee" class="list--context">
+          <div (click)="setCoffeeSelection('chocolateLatte')" class="content">
+            <p>CHOCOLATE ICED/HOT</p>
+            <span>₱100</span>
+          </div>
+          <div class="content">
+            <p>MATCHA LATTE ICED/HOT</p>
+            <span>₱100</span>
+          </div>
+          <div class="content">
+            <p>THAI MILK TEA</p>
+            <span>₱80</span>
+          </div>
         </div>
       </div>
-    
-      
     </div>
     <div class="right--container">
-      <div class="image--hero">
-        <img src="../../../../assets/images/vanillafrappe.jpg" alt="" />
-      </div>
-      <div class="context--container">
-        <div class="head"> 
-            <h1>Solo Lasagna</h1>
-            <p>₱80</p>
+      <div *ngIf="selectedCoffee['americano']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/vanillafrappe.jpg" alt="" />
         </div>
-        <div class="body">
-            <p>Classic tomato and beef sauce topped with
-                béchamel, served with 1 garlic bread</p>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>Americano</h1>
+              <p>₱80</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
         </div>
       </div>
+
+
+      <div *ngIf="selectedCoffee['latte']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/vanillafrappe.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>Latte</h1>
+              <p>₱80</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div *ngIf="selectedCoffee['chocolateLatte']" class="contained">
+        <div class="image--hero">
+          <img src="../../../../assets/images/vanillafrappe.jpg" alt="" />
+        </div>
+        <div class="context--container">
+          <div class="head"> 
+              <h1>CHOCOLATE ICED/HOT</h1>
+              <p>₱80</p>
+          </div>
+          <div class="body">
+              <p>Classic tomato and beef sauce topped with
+                  béchamel, served with 1 garlic bread</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      
     </div>
   </div>
 </div>
